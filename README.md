@@ -16,10 +16,10 @@ chmod +x airodump-parser.sh
 ./airodump-parser.sh capture-01.csv
 ```
 
-- Run against all CSVs and save to a new file
+- Run against all CSVs, select only unique values, and save to a new file
 
 ```
-./airodump-parser.sh *.csv > targets.csv
+./airodump-parser.sh *.csv | sort | uniq > targets.csv
 ```
 
 ### Example output:
